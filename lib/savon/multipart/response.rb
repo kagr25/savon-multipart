@@ -35,7 +35,8 @@ module Savon
 
       private
       def multipart?
-        !(http.headers['content-type'] =~ /^multipart/im).nil?
+        true
+        #!(http.headers['content-type'] =~ /^multipart/im).nil?
       end
 
       def xop?

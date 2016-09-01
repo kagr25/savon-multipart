@@ -55,7 +55,8 @@ module Savon
       def parse_body
         @parts = Mail::Part.new(
           :headers => http.headers,
-          :body => http.body
+          :body => http.body,
+          :multipart => true
         ).body.split!(boundary).parts
         @has_parsed_body = true
       end
